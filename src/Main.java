@@ -14,7 +14,7 @@ public class Main {
 
         bookSnark.setYear(1980);
         bookSnark.print();
-        bookCherryOrchid.setYear(2005);
-        bookCherryOrchid.print();
+        /*bookCherryOrchid.setYear(2005);
+        bookCherryOrchid.print();*/
     }
 }
