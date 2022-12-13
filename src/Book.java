@@ -11,6 +11,28 @@ public class Book {
         return title;
     }
 
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(title, author, year);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass()) {
+            return false;
+        }
+        Book b = (Book) obj;
+        return author.equals(b.author) &&
+                title.equals(b.title) &&
+                year == b.year;
+    }
+
+    @Override
+    public String toString() {
+        return title + ", " + author.getFirstName() +
+                " " + author.getLastName() + ", " + year + " г.";
+    }
+
     public Author getAuthor() {
         return author;
     }
@@ -26,8 +48,8 @@ public class Book {
     }
 
     // Напечатать сведения о книге
-    public void print() {
-        System.out.println(title + ", " + author.getFirstName() +
-                " " + author.getLastName() + ", " + year + " г.");
-    }
+//    public void print() {
+//        System.out.println(title + ", " + author.getFirstName() +
+//                " " + author.getLastName() + ", " + year + " г.");
+//    }
 }
